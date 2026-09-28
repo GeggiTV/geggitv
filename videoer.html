@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEGGITV - Videoarkiv</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEGGITV - Videoer</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.video-page{min-height:100vh;padding:150px 5% 70px;background:#030712;color:#fff}
+.video-page h1{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:32px}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,360px));gap:24px}
+.video-card{display:block;background:#111827;border:1px solid #26354d;border-radius:12px;overflow:hidden;color:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.video-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(56,189,248,.25)}
+.video-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.video-card span{display:block;padding:16px;font-size:1.08rem;font-weight:800}
+@media(max-width:900px){.video-page{padding-top:55px}}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html" aria-label="GEGGITV hjem">GEGGITV</a>
-  <button class="menu-button" type="button" aria-label="Vis meny" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" aria-label="Hovedmeny">
-    <a href="index.html">Hjem</a>
-    <a href="videoer.html">Videoarkiv</a>
-    <a href="pc-specs.html">PC Specs</a>
-    <a href="om.html">Om</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
+<header class="header">
+<a class="logo-link" href="index.html"><img class="logo" src="Designer%20(56).png" alt="GEGGITV"></a>
+<nav class="navigation" aria-label="Hovedmeny">
+<a href="index.html">Hjem</a>
+<a href="videoer.html">Videoer</a>
+<a href="kontakt.html">Kontakt</a>
+<a href="pc-specs.html">PC Specs</a>
+<a href="om.html">Om</a>
+</nav>
 </header>
-<main class="page"><div class="page-head"><div class="eyebrow">Spill og sendinger</div><h1 class="page-title">Videoarkiv</h1><p class="lead">Se opptak og videoer direkte på GEGGITV.</p></div><section class="video-grid"><a class="video-card" href="video-warzone.html"><img src="warzone.webp" alt="WARZONE STREAMS"><span>WARZONE STREAMS</span></a><a class="video-card" href="video-fc26.html"><img src="standard-fc26-cover-620x330.jpg" alt="FC 26 KARRIERE"><span>FC 26 KARRIERE</span></a><a class="video-card" href="video-007.html"><img src="007_First_Light_Key_Art.webp" alt="007 FIRST LIGHT"><span>007 FIRST LIGHT</span></a></section></main>
-<footer class="site-footer"><strong>GEGGITV</strong><span>Gaming • Racing • Norge</span></footer>
+<main class="video-page">
+<h1>VIDEOARKIV</h1>
+<div class="video-grid">
+<a class="video-card" href="video-warzone.html">
+<img src="warzone.webp" alt="Warzone Twitch Stream">
+<span>Warzone Twitch Stream</span>
+</a><a class="video-card" href="video-fc26.html">
+<img src="standard-fc26-cover-620x330.jpg" alt="FC 26 Karriere">
+<span>FC 26 Karriere</span>
+</a><a class="video-card" href="video-007.html">
+<img src="007_First_Light_Key_Art.webp" alt="007 First Light">
+<span>007 First Light</span>
+</a>
+</div>
+</main>
 </body>
 </html>

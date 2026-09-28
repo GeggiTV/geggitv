@@ -3,22 +3,341 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEGGITV - PC Specs</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="PC-spesifikasjoner og streamingutstyr for GEGGITV.">
+  <title>PC Specs | GEGGITV</title>
+  <style>
+    :root {
+      --bg: #071019;
+      --panel: rgba(11, 24, 35, 0.92);
+      --panel-2: rgba(15, 34, 48, 0.92);
+      --text: #f4f8fb;
+      --muted: #a9bdca;
+      --cyan: #34d8ff;
+      --green: #64f5ba;
+      --red: #ef3340;
+      --border: rgba(52, 216, 255, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(0, 188, 212, 0.16), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(57, 255, 155, 0.10), transparent 32%),
+        linear-gradient(160deg, #050a10 0%, var(--bg) 48%, #0b1520 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 18px clamp(20px, 5vw, 70px);
+      background: rgba(4, 10, 16, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      color: var(--cyan);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:hover,
+    nav a:focus-visible { color: var(--cyan); }
+
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 8px 0 12px;
+      font-size: clamp(2.3rem, 7vw, 5rem);
+      line-height: 1;
+      text-shadow: 0 0 28px rgba(52, 216, 255, 0.28);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 70px;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: clamp(22px, 4vw, 38px);
+      background: linear-gradient(145deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+    }
+
+    .section h2 {
+      margin: 0 0 22px;
+      color: var(--cyan);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 128px;
+      padding: 19px;
+      background: rgba(4, 12, 18, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 0.94rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .card p { margin: 0; }
+    .card .detail { color: var(--muted); font-size: 0.93rem; }
+
+    .storage-list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+    }
+
+    .storage-list li + li { margin-top: 7px; }
+
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      color: var(--muted);
+      background: rgba(52, 216, 255, 0.07);
+      border-left: 4px solid var(--cyan);
+      border-radius: 10px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 720px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; gap: 12px; }
+      .hero { padding-top: 55px; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html" aria-label="GEGGITV hjem">GEGGITV</a>
-  <button class="menu-button" type="button" aria-label="Vis meny" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
-  <nav class="site-nav" aria-label="Hovedmeny">
-    <a href="index.html">Hjem</a>
-    <a href="videoer.html">Videoarkiv</a>
-    <a href="pc-specs.html">PC Specs</a>
-    <a href="om.html">Om</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
-</header>
-<main class="page"><div class="page-head"><div class="eyebrow">Gaming og streaming</div><h1 class="page-title">PC Specs</h1><p class="lead">Maskinvaren og utstyret bak GEGGITV.</p></div><section class="spec-grid"><article class="spec-section"><h2>PC-system</h2><div class="spec-items"><div class="spec-item"><b>Prosessor</b>Intel Core i7-12700</div><div class="spec-item"><b>Skjermkort</b>ASUS ProArt GeForce RTX 4060 Ti OC, 16 GB</div><div class="spec-item"><b>Minne</b>Corsair Vengeance RGB DDR5 5600 MHz, 48 GB</div><div class="spec-item"><b>Hovedkort</b>ASUS TUF Gaming B760-PLUS WIFI</div><div class="spec-item"><b>CPU-kjøling</b>Cooler Master MasterLiquid 240L Core</div><div class="spec-item"><b>Kabinett</b>Cooler Master MasterBox TD500 Mesh V2</div><div class="spec-item"><b>Strømforsyning</b>Corsair RM750e, 750 W, 80 PLUS Gold</div><div class="spec-item"><b>Nettverk</b>TP-Link TG-3468 Gigabit</div><div class="spec-item"><b>Operativsystem</b>Windows 11 Pro</div></div></article><article class="spec-section"><h2>Lagring</h2><div class="spec-items"><div class="spec-item"><b>NVMe SSD</b>Kingston NV2 2 TB</div><div class="spec-item"><b>NVMe SSD</b>Kingston KC3000 4 TB</div><div class="spec-item"><b>NVMe SSD</b>Kingston FURY Renegade 2 TB</div><div class="spec-item"><b>Harddisk</b>Seagate BarraCuda 4 TB</div><div class="spec-item"><b>Total kapasitet</b>12 TB</div></div></article><article class="spec-section"><h2>Lydsystem</h2><div class="spec-items"><div class="spec-item"><b>Høyttalersystem</b>Logitech Z-906</div></div></article><article class="spec-section"><h2>Simulatorutstyr</h2><div class="spec-items"><div class="spec-item"><b>Pedaler</b>Logitech Heavy Equipment Pedals</div><div class="spec-item"><b>Sidepanel</b>Logitech Heavy Equipment Side Panel</div></div></article></section></main>
-<footer class="site-footer"><strong>GEGGITV</strong><span>Gaming • Racing • Norge</span></footer>
+  <header>
+    <a class="brand" href="index.html">GEGGITV</a>
+    <nav aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="videoer.html">Videoarkiv</a>
+      <a href="pc-specs.html" aria-current="page">PC Specs</a>
+      <a href="om.html">Om</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Gaming og streaming</div>
+    <h1>PC SPECS</h1>
+    <p>Maskinvaren og utstyret bak GEGGITV, fra gaming og racing til streaming, opptak og redigering.</p>
+  </section>
+
+  <main>
+    <section class="section" aria-labelledby="system-title">
+      <h2 id="system-title">🖥️ PC-system</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Prosessor</h3>
+          <p>Intel Core i7-12700</p>
+          <p class="detail">12 kjerner, 20 tråder, opptil 4,9 GHz</p>
+        </article>
+
+        <article class="card">
+          <h3>Skjermkort</h3>
+          <p>ASUS ProArt GeForce RTX 4060 Ti OC</p>
+          <p class="detail">16 GB GDDR6, PCIe 4.0</p>
+        </article>
+
+        <article class="card">
+          <h3>Minne</h3>
+          <p>Corsair Vengeance RGB DDR5</p>
+          <p class="detail">48 GB, 5600 MHz, 2 × 24 GB</p>
+        </article>
+
+        <article class="card">
+          <h3>Hovedkort</h3>
+          <p>ASUS TUF Gaming B760-PLUS WIFI</p>
+          <p class="detail">LGA 1700, ATX, DDR5</p>
+        </article>
+
+        <article class="card">
+          <h3>CPU-kjøling</h3>
+          <p>Cooler Master MasterLiquid 240L Core</p>
+          <p class="detail">240 mm væskekjøling</p>
+        </article>
+
+        <article class="card">
+          <h3>Kabinett</h3>
+          <p>Cooler Master MasterBox TD500 Mesh V2</p>
+          <p class="detail">Sort mid tower med 3 × 120 mm CF120 ARGB</p>
+        </article>
+
+        <article class="card">
+          <h3>Strømforsyning</h3>
+          <p>Corsair RMe Series RM750e</p>
+          <p class="detail">750 W, 80 PLUS Gold, modulær</p>
+        </article>
+
+        <article class="card">
+          <h3>Nettverk</h3>
+          <p>TP-LINK TG-3468</p>
+          <p class="detail">PCIe Gigabit-nettverkskort</p>
+        </article>
+
+        <article class="card">
+          <h3>Operativsystem</h3>
+          <p>Windows 11 Pro</p>
+          <p class="detail">Nordisk og engelsk</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="storage-title">
+      <h2 id="storage-title">💾 Lagring</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>NVMe SSD</h3>
+          <ul class="storage-list">
+            <li>Kingston KC3000 4 TB</li>
+            <li>Kingston FURY Renegade 2 TB</li>
+            <li>Kingston NV2 2 TB</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Harddisk</h3>
+          <p>Seagate BarraCuda 4 TB HDD</p>
+          <p class="detail">3,5 tommer, SATA, 5400 RPM</p>
+        </article>
+
+        <article class="card">
+          <h3>Total kapasitet</h3>
+          <p>12 TB</p>
+          <p class="detail">8 TB NVMe SSD og 4 TB HDD</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gaming-title">
+      <h2 id="gaming-title">🎮 Gaming- og simulatorutstyr</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Ratt og pedaler</h3>
+          <p>Logitech G920</p>
+        </article>
+
+        <article class="card">
+          <h3>Heavy Equipment</h3>
+          <p>Logitech Heavy Equipment Pedals</p>
+        </article>
+
+        <article class="card">
+          <h3>Sidepanel</h3>
+          <p>Logitech Heavy Equipment Side Panel</p>
+        </article>
+
+        <article class="card">
+          <h3>Tastatur</h3>
+          <p>HyperX-tastatur</p>
+        </article>
+
+        <article class="card">
+          <h3>Mus</h3>
+          <p>Deltaco GAM-085</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="stream-title">
+      <h2 id="stream-title">🎤 Streaming-utstyr</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Mikrofon</h3>
+          <p>CHERRY XTRFY-mikrofon</p>
+        </article>
+
+        <article class="card">
+          <h3>Stream-kontroller</h3>
+          <p>Elgato Stream Deck XL</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="audio-title">
+      <h2 id="audio-title">🔊 Lyd</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Lydsystem</h3>
+          <p>Logitech Z906</p>
+          <p class="detail">5.1 surroundlydsystem</p>
+        </article>
+      </div>
+      <p class="note">Oppsettet brukes til gaming, racing, simulatorspill, streaming, opptak og videoredigering på GEGGITV.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 GEGGITV
+  </footer>
 </body>
 </html>
