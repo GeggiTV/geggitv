@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEGGITV - Warzone Twitch Stream</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.player-page{min-height:100vh;padding:145px 5% 70px;background:#030712;color:#fff}
-.back-link{display:inline-block;margin-bottom:22px;color:#38bdf8;text-decoration:none;font-weight:800}
-.player-page h1{margin-bottom:22px;font-size:clamp(2rem,4vw,3.3rem)}
-.player{width:min(1100px,100%);aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 15px 45px rgba(0,0,0,.55)}
-.player iframe{width:100%;height:100%;border:0}
-@media(max-width:900px){.player-page{padding-top:55px}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEGGITV - Warzone Twitch Stream</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+body{margin:0;min-height:100vh;color:#f4f8ff;background:radial-gradient(circle at 18% 12%,rgba(0,72,94,.32),transparent 35%),radial-gradient(circle at 88% 18%,rgba(0,77,50,.25),transparent 32%),#020811;font-family:Arial,Helvetica,sans-serif}
+.video-page{min-height:100vh;padding:108px 5% 70px}
+.video-shell{width:min(760px,100%)}
+.back-link{display:inline-block;margin:0 0 18px;color:#28d9ff;text-decoration:none;font-weight:800}
+.back-link:hover,.back-link:focus-visible{color:#58f7ba}
+.video-page h1{margin:0 0 22px;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.08}
+.video-player{width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;border:1px solid #164159;border-radius:12px;box-shadow:0 16px 34px rgba(0,0,0,.35)}
+.video-player iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:650px){.video-page{padding:42px 20px 60px}}
 </style>
 </head>
 <body>
 <header class="header">
-<a class="logo-link" href="index.html"><img class="logo" src="Designer%20(56).png" alt="GEGGITV"></a>
-<nav class="navigation" aria-label="Hovedmeny">
-<a href="index.html">Hjem</a>
-<a href="videoer.html">Videoer</a>
-<a href="kontakt.html">Kontakt</a>
-<a href="pc-specs.html">PC Specs</a>
-<a href="om.html">Om</a>
-</nav>
+  <a class="logo-link" href="index.html" aria-label="Hjem">
+    <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
+  </a>
+  <nav class="navigation" aria-label="Hovedmeny">
+    <a href="index.html">Hjem</a>
+    <a href="videoer.html">Videoer</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="pc-specs.html">PC Specs</a>
+    <a href="om.html">Om</a>
+  </nav>
 </header>
-<main class="player-page">
-<a class="back-link" href="videoer.html">← Tilbake til videoarkivet</a>
-<h1>Warzone Twitch Stream</h1>
-<div class="player">
-<iframe src="https://www.youtube.com/embed/-YX6VZjRbLc" title="Warzone Twitch Stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</main>
+  <main class="video-page">
+    <section class="video-shell">
+      <a class="back-link" href="videoer.html">← Tilbake til videoarkivet</a>
+      <h1>Warzone Twitch Stream</h1>
+      <div class="video-player">
+        <iframe src="https://www.youtube.com/embed/-YX6VZjRbLc" title="Warzone Twitch Stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
