@@ -8,35 +8,28 @@
 <style>
 body{margin:0;min-height:100vh;color:#f4f8ff;background:radial-gradient(circle at 18% 12%,rgba(0,72,94,.32),transparent 35%),radial-gradient(circle at 88% 18%,rgba(0,77,50,.25),transparent 32%),#020811;font-family:Arial,Helvetica,sans-serif}
 .om-page{min-height:100vh;padding:160px 5% 70px}
-.om-box{max-width:900px;background:#0b1927;border:1px solid #164159;border-radius:12px;padding:32px;box-shadow:0 14px 30px rgba(0,0,0,.26)}
+.om-box{width:min(900px,100%);background:#0b1927;border:1px solid #164159;border-radius:12px;padding:32px;box-shadow:0 14px 30px rgba(0,0,0,.26)}
 .om-box h1{margin:0 0 15px;font-size:clamp(2.6rem,5vw,4.2rem);color:#f4f8ff}
 .om-box h2{margin:0 0 24px;color:#58f7ba;font-size:1.15rem}
-.om-box p{color:#aac0d2;line-height:1.8;margin:0 0 18px}
-.om-box ul{color:#aac0d2;line-height:1.9}
+.om-box p,.om-box li{color:#aac0d2;line-height:1.8}.om-box p{margin:0 0 18px}.om-box ul{margin:0 0 20px;padding-left:24px}
+@media(max-width:650px){.om-page{padding:42px 20px 60px}.om-box{padding:24px}}
 </style>
 </head>
 <body>
 <header class="header">
-<a class="logo-link" href="index.html"><img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo"></a>
-<nav class="navigation"><a href="index.html">Hjem</a><a href="videoer.html">Videoer</a><a href="kontakt.html">Kontakt</a><a href="pc-specs.html">PC Specs</a><a href="om.html">Om</a></nav>
+<a class="logo-link" href="index.html" aria-label="Hjem"><img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo"></a>
+<nav class="navigation" aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="videoer.html">Videoer</a><a href="kontakt.html">Kontakt</a><a href="pc-specs.html">PC Specs</a><a href="om.html">Om</a></nav>
 </header>
 <main class="om-page">
-<div class="om-box">
+<section class="om-box">
 <h1>OM GEGGITV</h1>
 <h2>Gaming • Taktikk • Norge</h2>
 <p>GEGGITV er en norsk gaming- og streamingkanal med fokus på underholdning, taktikk og fellesskap.</p>
 <p>På kanalen finner du innhold fra blant annet:</p>
-<ul>
-<li>Call of Duty: Warzone</li>
-<li>FC 26 Karriere</li>
-<li>007 First Light</li>
-<li>Simulator- og racinginnhold</li>
-<li>Livestreams på Twitch</li>
-<li>Opptak på YouTube</li>
-</ul>
+<ul><li>Call of Duty: Warzone</li><li>FC 26 Karriere</li><li>007 First Light</li><li>Simulator- og racinginnhold</li><li>Livestreams på Twitch</li><li>Opptak på YouTube</li></ul>
 <p>Nettsiden samler videoer, PC-oppsett og informasjon om kanalen på ett sted.</p>
 <p>Målet med GEGGITV er å skape en kanal hvor gaming, moro og gode opplevelser står i fokus.</p>
-</div>
+</section>
 </main>
 </body>
 </html>
