@@ -1,46 +1,126 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEGGITV - Videoer</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.video-page{min-height:100vh;padding:150px 5% 70px;background:#030712;color:#fff}
-.video-page h1{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:32px}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,360px));gap:24px}
-.video-card{display:block;background:#111827;border:1px solid #26354d;border-radius:12px;overflow:hidden;color:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
-.video-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(56,189,248,.25)}
-.video-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
-.video-card span{display:block;padding:16px;font-size:1.08rem;font-weight:800}
-@media(max-width:900px){.video-page{padding-top:55px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEGGITV - Videoarkiv</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: #f4f8ff;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(0, 72, 94, 0.32), transparent 35%),
+        radial-gradient(circle at 88% 18%, rgba(0, 77, 50, 0.25), transparent 32%),
+        #020811;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .video-page {
+      min-height: 100vh;
+      padding: 118px 5% 70px;
+    }
+
+    .video-page h1 {
+      margin: 0 0 32px;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1;
+      color: #f4f8ff;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 290px));
+      gap: 20px;
+      justify-content: start;
+    }
+
+    .video-card {
+      display: block;
+      overflow: hidden;
+      color: #f4f8ff;
+      text-decoration: none;
+      background: #0b1927;
+      border: 1px solid #164159;
+      border-radius: 12px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .video-card:hover,
+    .video-card:focus-visible {
+      transform: translateY(-5px);
+      border-color: #28d9ff;
+      box-shadow: 0 16px 34px rgba(40, 217, 255, 0.16);
+    }
+
+    .video-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .video-card span {
+      display: block;
+      padding: 15px;
+      color: #f4f8ff;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 290px));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .video-page {
+        padding: 42px 20px 60px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-<a class="logo-link" href="index.html"><img class="logo" src="Designer%20(56).png" alt="GEGGITV"></a>
-<nav class="navigation" aria-label="Hovedmeny">
-<a href="index.html">Hjem</a>
-<a href="videoer.html">Videoer</a>
-<a href="kontakt.html">Kontakt</a>
-<a href="pc-specs.html">PC Specs</a>
-<a href="om.html">Om</a>
-</nav>
-</header>
-<main class="video-page">
-<h1>VIDEOARKIV</h1>
-<div class="video-grid">
-<a class="video-card" href="video-warzone.html">
-<img src="warzone.webp" alt="Warzone Twitch Stream">
-<span>Warzone Twitch Stream</span>
-</a><a class="video-card" href="video-fc26.html">
-<img src="standard-fc26-cover-620x330.jpg" alt="FC 26 Karriere">
-<span>FC 26 Karriere</span>
-</a><a class="video-card" href="video-007.html">
-<img src="007_First_Light_Key_Art.webp" alt="007 First Light">
-<span>007 First Light</span>
-</a>
-</div>
-</main>
+  <header class="header">
+    <a class="logo-link" href="index.html" aria-label="Hjem">
+      <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
+    </a>
+
+    <nav class="navigation" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="videoer.html">Videoer</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="pc-specs.html">PC Specs</a>
+      <a href="om.html">Om</a>
+    </nav>
+  </header>
+
+  <main class="video-page">
+    <h1>VIDEOARKIV</h1>
+
+    <section class="video-grid" aria-label="Videoer">
+      <a class="video-card" href="video-warzone.html">
+        <img src="warzone.webp" alt="Warzone Twitch Stream">
+        <span>Warzone Twitch Stream</span>
+      </a>
+
+      <a class="video-card" href="video-fc26.html">
+        <img src="standard-fc26-cover-620x330.jpg" alt="FC 26 Karriere">
+        <span>FC 26 Karriere</span>
+      </a>
+
+      <a class="video-card" href="video-007.html">
+        <img src="007_First_Light_Key_Art.webp" alt="007 First Light">
+        <span>007 First Light</span>
+      </a>
+    </section>
+  </main>
 </body>
 </html>
