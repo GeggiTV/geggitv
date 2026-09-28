@@ -1,1 +1,33 @@
-<!DOCTYPE html><html lang="no"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GEGGITV - Kontakt</title><link rel="stylesheet" href="style.css"><style>.contact-page{min-height:100vh;background:#030712;color:#fff;padding:150px 5% 70px;text-align:center}.cards{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px}.card{background:#111827;border-radius:12px;padding:30px;min-width:280px;text-decoration:none;color:#fff;border:1px solid #26354d}.card:hover{transform:translateY(-4px)}.card h2{margin-bottom:10px}</style></head><body><header class="header"><a class="logo-link" href="index.html"><img class="logo" src="Designer%20(56).png" alt="GEGGITV"></a><nav class="navigation"><a href="index.html">Hjem</a><a href="videoer.html">Videoer</a><a href="kontakt.html">Kontakt</a></nav></header><main class="contact-page"><h1>KONTAKT & LENKER</h1><div class="cards"><a class="card" href="https://www.youtube.com/@GeirArne" target="_blank"><h2>YouTube</h2><p>@GeirArne</p></a><a class="card" href="https://www.twitch.tv/geggi1984" target="_blank"><h2>Twitch</h2><p>geggi1984</p></a></div></main></body></html>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEGGITV - Kontakt</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{margin:0;min-height:100vh;color:#f4f8ff;background:radial-gradient(circle at 18% 12%,rgba(0,72,94,.32),transparent 35%),radial-gradient(circle at 88% 18%,rgba(0,77,50,.25),transparent 32%),#020811;font-family:Arial,Helvetica,sans-serif}
+.contact-page{min-height:100vh;padding:118px 5% 70px;text-align:center}
+.contact-page h1{margin:0 0 12px;font-size:clamp(2.7rem,5vw,4.3rem);line-height:1}
+.contact-intro{margin:0;color:#aac0d2;font-size:1.05rem}
+.contact-grid{width:min(870px,100%);margin:38px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.contact-card{min-height:145px;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#f4f8ff;text-decoration:none;background:#0b1927;border:1px solid #164159;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.26);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.contact-card:hover,.contact-card:focus-visible{transform:translateY(-5px);border-color:#28d9ff;box-shadow:0 16px 34px rgba(40,217,255,.16)}
+.contact-icon{color:#58f7ba;font-size:1.8rem}.contact-card h2{margin:0;color:#28d9ff;font-size:1.3rem}.contact-card p{margin:0;color:#aac0d2;overflow-wrap:anywhere}
+@media(max-width:720px){.contact-page{padding:42px 20px 60px}.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header">
+<a class="logo-link" href="index.html" aria-label="Hjem"><img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo"></a>
+<nav class="navigation" aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="videoer.html">Videoer</a><a href="kontakt.html">Kontakt</a><a href="pc-specs.html">PC Specs</a><a href="om.html">Om</a></nav>
+</header>
+<main class="contact-page">
+<h1>KONTAKT &amp; LENKER</h1><p class="contact-intro">Kontakt GEGGITV eller følg kanalene.</p>
+<section class="contact-grid">
+<a class="contact-card" href="mailto:GEGGITV@Hotmail.com"><span class="contact-icon">✉</span><h2>E-post</h2><p>GEGGITV@Hotmail.com</p></a>
+<a class="contact-card" href="https://www.youtube.com/@GeirArne" target="_blank" rel="noopener noreferrer"><span class="contact-icon">▶</span><h2>YouTube</h2><p>@GeirArne</p></a>
+<a class="contact-card" href="https://www.twitch.tv/geggi1984" target="_blank" rel="noopener noreferrer"><span class="contact-icon">●</span><h2>Twitch</h2><p>geggi1984</p></a>
+</section>
+</main>
+</body></html>
