@@ -6,11 +6,15 @@
 <title>GEGGITV - Videoer</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.video-page{min-height:100vh;padding:140px 40px;background:#050a0f;color:white}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:30px}
-.video-card{background:#111827;border-radius:12px;overflow:hidden}
-.video-card img{width:100%;display:block}
-.video-card h3{padding:15px}
+.video-page{background:#030712;color:#fff;min-height:100vh;padding:140px 30px 60px}
+.section-title{font-size:2.2rem;margin-bottom:30px}
+.row{margin-bottom:50px}
+.row h2{margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.card{background:#111827;border-radius:12px;overflow:hidden;transition:.2s transform}
+.card:hover{transform:scale(1.03)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card div{padding:12px;font-weight:bold}
 </style>
 </head>
 <body>
@@ -23,12 +27,20 @@
 </nav>
 </header>
 <main class="video-page">
-<h1>STREAM ARKIV</h1>
-<div class="video-grid">
-<div class="video-card"><img src="Designer%20(55).png"><h3>FC26 Karriere</h3></div>
-<div class="video-card"><img src="Designer%20(55).png"><h3>Warzone Stream</h3></div>
-<div class="video-card"><img src="Designer%20(55).png"><h3>007 First Light</h3></div>
-</div>
-</main>
-</body>
-</html>
+<h1 class="section-title">VIDEOARKIV</h1>
+<div class="row"><h2>Warzone</h2><div class="grid"> 
+<div class="card"><img src="Designer%20(55).png"><div>Warzone Høydepunkter #1</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Warzone Solo Victory</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Warzone Squad Night</div></div>
+</div></div>
+<div class="row"><h2>FC26</h2><div class="grid">
+<div class="card"><img src="Designer%20(55).png"><div>Karrieremodus Del 1</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Karrieremodus Del 2</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Ultimate Team</div></div>
+</div></div>
+<div class="row"><h2>007 First Light</h2><div class="grid">
+<div class="card"><img src="Designer%20(55).png"><div>Oppdrag 1</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Oppdrag 2</div></div>
+<div class="card"><img src="Designer%20(55).png"><div>Oppdrag 3</div></div>
+</div></div>
+</main></body></html>
