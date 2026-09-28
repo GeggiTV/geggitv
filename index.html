@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#020811">
-  <title>GEGGITV</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="home-mobile.css">
-</head>
-<body class="home-page">
-  <header class="header">
-    <a class="logo-link" href="index.html" aria-label="Hjem">
-      <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
-    </a>
-    <nav class="navigation" aria-label="Hovedmeny">
-      <a href="index.html">Hjem</a>
-      <a href="videoer.html">Videoer</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="pc-specs.html">PC Specs</a>
-      <a href="om.html">Om</a>
-    </nav>
-  </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEGGITV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home-mobile.css" media="(max-width: 900px)">
+    <style>
+        @media (min-width: 901px) {
+            .hero-content {
+                width: min(1100px, 92vw);
+                text-align: center;
+            }
 
-  <main>
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Gaming • Taktikk • Norge</h1>
-        <p>Velkommen til GEGGITV</p>
-        <div class="hero-buttons">
-          <a class="button button-youtube" href="https://www.youtube.com/@GeirArne" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a class="button button-twitch" href="https://www.twitch.tv/geggi1984" target="_blank" rel="noopener noreferrer">Twitch</a>
-        </div>
-      </div>
-    </section>
-  </main>
+            .hero-content h1 {
+                white-space: nowrap;
+                font-size: clamp(3rem, 4.2vw, 5.2rem);
+                line-height: 1;
+                margin-bottom: 18px;
+            }
+
+            .hero-content p {
+                margin-bottom: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a class="logo-link" href="index.html" aria-label="Hjem">
+            <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
+        </a>
+
+        <nav class="navigation" aria-label="Hovedmeny">
+            <a href="index.html">Hjem</a>
+            <a href="videoer.html">Videoer</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="pc-specs.html">PC Specs</a>
+            <a href="om.html">Om</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>Gaming • Taktikk • Norge</h1>
+                <p>Velkommen til GEGGITV</p>
+
+                <div class="hero-buttons">
+                    <a class="button button-youtube"
+                       href="https://www.youtube.com/@GeirArne"
+                       target="_blank"
+                       rel="noopener noreferrer">YouTube</a>
+
+                    <a class="button button-twitch"
+                       href="https://www.twitch.tv/geggi1984"
+                       target="_blank"
+                       rel="noopener noreferrer">Twitch</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
