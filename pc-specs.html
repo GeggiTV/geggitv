@@ -6,102 +6,19 @@
     <title>GEGGITV - PC Specs</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .specs-page {
-            min-height: 100vh;
-            padding: 150px 5% 70px;
-            background: #030712;
-            color: #ffffff;
-        }
-
-        .specs-header {
-            width: min(1200px, 100%);
-            margin: 0 auto 36px;
-        }
-
-        .specs-header h1 {
-            margin-bottom: 12px;
-            font-size: clamp(2.2rem, 5vw, 4rem);
-        }
-
-        .specs-header p {
-            color: #cbd5e1;
-            font-size: 1.08rem;
-        }
-
-        .specs-grid {
-            width: min(1200px, 100%);
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
-        }
-
-        .spec-card {
-            padding: 28px;
-            background: #111827;
-            border: 1px solid #26354d;
-            border-radius: 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-        }
-
-        .spec-card h2 {
-            margin-bottom: 20px;
-            color: #38bdf8;
-            font-size: 1.45rem;
-        }
-
-        .spec-list {
-            list-style: none;
-            display: grid;
-            gap: 14px;
-        }
-
-        .spec-list li {
-            padding-bottom: 14px;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-        }
-
-        .spec-list li:last-child {
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-
-        .spec-label {
-            display: block;
-            margin-bottom: 4px;
-            color: #94a3b8;
-            font-size: 0.86rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
-        .spec-value {
-            display: block;
-            color: #ffffff;
-            font-size: 1.05rem;
-            font-weight: 700;
-        }
-
-        .known-item {
-            border-left: 3px solid #38bdf8;
-            padding-left: 12px;
-        }
-
-        .placeholder {
-            color: #64748b;
-            font-weight: 600;
-        }
-
-        @media (max-width: 900px) {
-            .specs-page {
-                padding-top: 55px;
-            }
-
-            .specs-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .specs-page { min-height:100vh; padding:150px 5% 70px; background:#030712; color:#fff; }
+        .specs-header { width:min(1200px,100%); margin:0 auto 36px; }
+        .specs-header h1 { margin-bottom:12px; font-size:clamp(2.2rem,5vw,4rem); }
+        .specs-header p { color:#cbd5e1; font-size:1.08rem; }
+        .specs-grid { width:min(1200px,100%); margin:0 auto; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+        .spec-card { padding:28px; background:#111827; border:1px solid #26354d; border-radius:14px; box-shadow:0 12px 30px rgba(0,0,0,.28); }
+        .spec-card h2 { margin-bottom:20px; color:#38bdf8; font-size:1.45rem; }
+        .spec-list { list-style:none; display:grid; gap:14px; }
+        .spec-list li { padding:0 0 14px 12px; border-left:3px solid #38bdf8; border-bottom:1px solid rgba(148,163,184,.18); }
+        .spec-list li:last-child { padding-bottom:0; border-bottom:0; }
+        .spec-label { display:block; margin-bottom:4px; color:#94a3b8; font-size:.86rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+        .spec-value { display:block; color:#fff; font-size:1.05rem; font-weight:700; }
+        @media (max-width:900px) { .specs-page{padding-top:55px} .specs-grid{grid-template-columns:1fr} }
     </style>
 </head>
 <body>
@@ -109,7 +26,6 @@
         <a class="logo-link" href="index.html" aria-label="Hjem">
             <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
         </a>
-
         <nav class="navigation" aria-label="Hovedmeny">
             <a href="index.html">Hjem</a>
             <a href="videoer.html">Videoer</a>
@@ -122,45 +38,48 @@
     <main class="specs-page">
         <section class="specs-header">
             <h1>PC SPECS &amp; UTSTYR</h1>
-            <p>Maskinvare, lyd og kontrollutstyr brukt av GEGGITV.</p>
+            <p>Maskinvare, lagring, lyd og kontrollutstyr brukt av GEGGITV.</p>
         </section>
 
         <section class="specs-grid">
             <article class="spec-card">
                 <h2>Gaming-PC</h2>
                 <ul class="spec-list">
-                    <li><span class="spec-label">Prosessor</span><span class="spec-value placeholder">Legg inn CPU</span></li>
-                    <li><span class="spec-label">Skjermkort</span><span class="spec-value placeholder">Legg inn GPU</span></li>
-                    <li><span class="spec-label">Minne</span><span class="spec-value placeholder">Legg inn RAM</span></li>
-                    <li><span class="spec-label">Hovedkort</span><span class="spec-value placeholder">Legg inn hovedkort</span></li>
-                    <li><span class="spec-label">Lagring</span><span class="spec-value placeholder">Legg inn SSD / HDD</span></li>
-                    <li><span class="spec-label">Kabinett</span><span class="spec-value placeholder">Legg inn kabinett</span></li>
+                    <li><span class="spec-label">Prosessor</span><span class="spec-value">Intel Core i7-12700, 12 kjerner / 20 tråder</span></li>
+                    <li><span class="spec-label">Skjermkort</span><span class="spec-value">ASUS ProArt GeForce RTX 4060 Ti OC, 16 GB GDDR6</span></li>
+                    <li><span class="spec-label">Minne</span><span class="spec-value">Corsair Vengeance RGB DDR5 5600 MHz, 48 GB</span></li>
+                    <li><span class="spec-label">Hovedkort</span><span class="spec-value">ASUS TUF Gaming B760-PLUS WIFI</span></li>
+                    <li><span class="spec-label">CPU-kjøler</span><span class="spec-value">Cooler Master MasterLiquid 240L Core</span></li>
+                    <li><span class="spec-label">Kabinett</span><span class="spec-value">Cooler Master MasterBox TD500 Mesh V2</span></li>
+                    <li><span class="spec-label">Strømforsyning</span><span class="spec-value">Corsair RMe Series RM750e, 750 W, 80 PLUS Gold</span></li>
+                    <li><span class="spec-label">Nettverkskort</span><span class="spec-value">TP-Link TG-3468 Gigabit</span></li>
+                    <li><span class="spec-label">Operativsystem</span><span class="spec-value">Windows 11 Pro</span></li>
                 </ul>
             </article>
 
             <article class="spec-card">
-                <h2>Skjermer &amp; tilbehør</h2>
+                <h2>Lagring</h2>
                 <ul class="spec-list">
-                    <li><span class="spec-label">Hovedskjerm</span><span class="spec-value placeholder">Legg inn hovedskjerm</span></li>
-                    <li><span class="spec-label">Ekstra skjerm</span><span class="spec-value placeholder">Legg inn ekstra skjerm</span></li>
-                    <li><span class="spec-label">Tastatur</span><span class="spec-value placeholder">Legg inn tastatur</span></li>
-                    <li><span class="spec-label">Mus</span><span class="spec-value placeholder">Legg inn mus</span></li>
-                    <li><span class="spec-label">Headset / mikrofon</span><span class="spec-value placeholder">Legg inn headset eller mikrofon</span></li>
+                    <li><span class="spec-label">NVMe SSD</span><span class="spec-value">Kingston NV2 PCIe 4.0, 2 TB</span></li>
+                    <li><span class="spec-label">NVMe SSD</span><span class="spec-value">Kingston KC3000, 4 TB</span></li>
+                    <li><span class="spec-label">NVMe SSD</span><span class="spec-value">Kingston FURY Renegade PCIe 4.0, 2 TB</span></li>
+                    <li><span class="spec-label">Harddisk</span><span class="spec-value">Seagate BarraCuda 3,5-tommer, 4 TB</span></li>
+                    <li><span class="spec-label">Samlet lagringsplass</span><span class="spec-value">12 TB</span></li>
                 </ul>
             </article>
 
             <article class="spec-card">
                 <h2>Lydsystem</h2>
                 <ul class="spec-list">
-                    <li class="known-item"><span class="spec-label">Høyttalersystem</span><span class="spec-value">Logitech Z-906</span></li>
+                    <li><span class="spec-label">Høyttalersystem</span><span class="spec-value">Logitech Z-906</span></li>
                 </ul>
             </article>
 
             <article class="spec-card">
                 <h2>Simulatorutstyr</h2>
                 <ul class="spec-list">
-                    <li class="known-item"><span class="spec-label">Pedaler</span><span class="spec-value">Logitech Heavy Equipment Pedals</span></li>
-                    <li class="known-item"><span class="spec-label">Sidepanel</span><span class="spec-value">Logitech Heavy Equipment Side Panel</span></li>
+                    <li><span class="spec-label">Pedaler</span><span class="spec-value">Logitech Heavy Equipment Pedals</span></li>
+                    <li><span class="spec-label">Sidepanel</span><span class="spec-value">Logitech Heavy Equipment Side Panel</span></li>
                 </ul>
             </article>
         </section>
