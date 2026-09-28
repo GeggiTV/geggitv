@@ -1,59 +1,39 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEGGITV</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .hero-content h1 {
-            white-space: nowrap;
-            font-size: clamp(2rem, 4.6vw, 4.8rem);
-        }
-
-        @media (max-width: 700px) {
-            .hero-content h1 {
-                font-size: clamp(1.45rem, 6.3vw, 2.6rem);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#020811">
+  <title>GEGGITV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home-mobile.css">
 </head>
-<body>
-    <header class="header">
-        <a class="logo-link" href="index.html" aria-label="Hjem">
-            <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
-        </a>
+<body class="home-page">
+  <header class="header">
+    <a class="logo-link" href="index.html" aria-label="Hjem">
+      <img class="logo" src="Designer%20(56).png" alt="GEGGITV-logo">
+    </a>
+    <nav class="navigation" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="videoer.html">Videoer</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="pc-specs.html">PC Specs</a>
+      <a href="om.html">Om</a>
+    </nav>
+  </header>
 
-        <nav class="navigation" aria-label="Hovedmeny">
-            <a href="index.html">Hjem</a>
-            <a href="videoer.html">Videoer</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="pc-specs.html">PC Specs</a>
-            <a href="om.html">Om</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-                <h1>Gaming • Taktikk • Norge</h1>
-                <p>Velkommen til GEGGITV</p>
-
-                <div class="hero-buttons">
-                    <a class="button button-youtube"
-                       href="https://www.youtube.com/@GeirArne"
-                       target="_blank"
-                       rel="noopener noreferrer">YouTube</a>
-
-                    <a class="button button-twitch"
-                       href="https://www.twitch.tv/geggi1984"
-                       target="_blank"
-                       rel="noopener noreferrer">Twitch</a>
-                </div>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Gaming • Taktikk • Norge</h1>
+        <p>Velkommen til GEGGITV</p>
+        <div class="hero-buttons">
+          <a class="button button-youtube" href="https://www.youtube.com/@GeirArne" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="button button-twitch" href="https://www.twitch.tv/geggi1984" target="_blank" rel="noopener noreferrer">Twitch</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

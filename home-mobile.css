@@ -1,0 +1,98 @@
+/* Mobiltilpasning kun for Hjem. Andre sider påvirkes ikke. */
+@media (max-width: 700px) {
+  .home-page {
+    overflow-x: hidden;
+  }
+
+  .home-page .header {
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: max(14px, env(safe-area-inset-top)) 12px 0;
+  }
+
+  .home-page .logo {
+    display: block;
+    width: 132px;
+    height: auto;
+  }
+
+  .home-page .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 15px;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .home-page .navigation a {
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .home-page .hero {
+    min-height: 100svh;
+    background-position: 38% center;
+    background-size: cover;
+  }
+
+  .home-page .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.10) 45%, rgba(0,0,0,.48)),
+      radial-gradient(circle at center, transparent, rgba(0,0,0,.25));
+  }
+
+  .home-page .hero-content {
+    width: calc(100% - 28px);
+    max-width: 520px;
+    margin-top: 145px;
+    padding: 24px 14px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(2, 8, 17, 0.24);
+    backdrop-filter: blur(2px);
+  }
+
+  .home-page .hero-content h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.08;
+    white-space: normal;
+  }
+
+  .home-page .hero-content p {
+    margin-top: 14px;
+    font-size: 1.15rem;
+  }
+
+  .home-page .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .home-page .button {
+    flex: 1 1 135px;
+    min-width: 0;
+    max-width: 180px;
+    padding: 13px 18px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-page .logo { width: 116px; }
+  .home-page .navigation { gap: 7px 11px; }
+  .home-page .navigation a { font-size: 0.75rem; }
+  .home-page .hero-content { margin-top: 152px; }
+  .home-page .hero-content h1 { font-size: 1.9rem; }
+  .home-page .hero-buttons { flex-direction: column; align-items: center; }
+  .home-page .button { width: 100%; max-width: 220px; }
+}
